@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+
+*.log
+streamlit.out.log
+streamlit.err.log
+
+eye_state_model.broken-*.keras
+eye_state_model.keras
+
+datasets/
+
+.DS_Store
+Thumbs.db
