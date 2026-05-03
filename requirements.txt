@@ -1,6 +1,6 @@
-streamlit
-tensorflow
-numpy
-pillow
-streamlit-webrtc
-tornado
+streamlit==1.57.0
+tensorflow==2.21.0
+numpy==2.4.4
+pillow==12.2.0
+streamlit-webrtc==0.64.6
+tornado==6.5.5
