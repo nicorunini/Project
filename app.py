@@ -2,6 +2,10 @@ import os
 import threading
 from pathlib import Path
 
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("TF_ENABLE_ONEDNN_OPTS", "0")
+os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
+
 import numpy as np
 import streamlit as st
 import tensorflow as tf
@@ -20,7 +24,7 @@ MODEL_LOCK = threading.Lock()
 
 @st.cache_resource
 def load_model(model_path: str):
-    return tf.keras.models.load_model(model_path)
+    return tf.keras.models.load_model(model_path, compile=False)
 
 
 def parse_labels(raw_labels: str):
